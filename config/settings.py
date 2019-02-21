@@ -52,14 +52,6 @@ DATABASES = {
     'default': dj_database_url.config(),
 }
 
-REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    )
-}
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -74,6 +66,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_bmemcached.memcached.BMemcached',
+        'LOCATION': [os.environ.get('MEMCACHEDCLOUD_SERVERS')],
+        'OPTIONS': {
+            'username': os.environ.get('MEMCACHEDCLOUD_USERNAME'),
+            'password': os.environ.get('MEMCACHEDCLOUD_PASSWORD')
+        }
+    }
+}
 
 LANGUAGE_CODE = 'ja'
 TIME_ZONE = 'Asia/Tokyo'
