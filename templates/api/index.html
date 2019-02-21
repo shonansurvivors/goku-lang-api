@@ -48,12 +48,12 @@
         <h3>GETの場合</h3>
         <p>
           $ curl https://gokulang.herokuapp.com{% url 'api' %}?text=お願いします<br>
-          {"origin": "お願いします", "translated": "おねげぇすっぞ"}
+          {"original": "お願いします", "translated": "おねげぇすっぞ"}
         </p>
         <h3>POSTの場合</h3>
         <p>
           $ curl https://gokulang.herokuapp.com{% url 'api' %} -X POST -d 'text=もう帰ります'<br>
-          {"origin": "もう帰ります", "translated": "もうけぇっぞ"}
+          {"original": "もう帰ります", "translated": "もうけぇっぞ"}
         </p>
       <h2>作った人</h2>
       <p>
