@@ -1,0 +1,7 @@
+.idea/
+venv/
+/gokulang
+db.sqlite3
+__pycache__
+local_settings.py
+*.py[co]$ git init
