@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126620038-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-126620038-2');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -31,7 +40,7 @@
           パラメータ"text"に日本語の文章を入れてくれ。<br>
           レスポンスの<br>
           <ul>
-            <li>"original"には"text"そのまま</li>
+            <li>"original"には入力値である"text"そのまま</li>
             <li>"translated"には変換後の文章</li>
           </ul>
           が入るぞ。
