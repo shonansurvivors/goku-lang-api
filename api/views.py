@@ -3,7 +3,7 @@ import json
 from django.views.generic import View, TemplateView
 from django.http.response import HttpResponse
 
-from .gokulang.gokulang import GokuLang
+from gokulang.gokulang import GokuLang
 
 
 class GokuLangView(View):
